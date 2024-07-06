@@ -1,19 +1,7 @@
 #include <stdio.h>
+#include<stdlib.h>
 
-
-int linearSearch(int arr[], int n, int find) {
-    
-    if (n == 0) {
-        return -1;
-    }
-    
-    
-    if (arr[n - 1] == find) {
-        return n - 1; 
-    }
-    
-    return linearSearch(arr, n - 1, find);
-}
+int linearSearch(int arr[], int n, int find);
 
 int main() {
     int arr[] = {5, 2, 4, 6, 1, 3};
@@ -29,3 +17,18 @@ int main() {
 
     return 0;
 }
+
+int linearSearch(int arr[], int n, int find) {
+    
+    if (n == 0) {
+        return -1;
+    }
+    
+    
+    if (arr[n - 1] == find) {
+        return n - 1; 
+    }
+    
+    return linearSearch(arr, n - 1, find);
+}
+
